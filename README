@@ -2,7 +2,7 @@ NAME
     Pod::Weaver::PluginBundle::AYOUNG - AYOUNG's default Pod::Weaver config
 
 VERSION
-    version 0.05
+    version 0.06
 
 DESCRIPTION
     Roughly equivalent to:
