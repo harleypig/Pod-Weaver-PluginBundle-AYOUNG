@@ -7,7 +7,7 @@ use warnings;
 
 use Pod::Weaver::Config::Assembler;
 
-# VERSION
+our $VERSION = 0.09;  # VERSION
 
 sub _exp { Pod::Weaver::Config::Assembler->expand_package( $_[ 0 ] ) }
 
@@ -15,21 +15,7 @@ sub mvp_bundle_config {
 
   my @plugins;
 
-  push @plugins, (
-    [ 'CorePrep',     _exp('@CorePrep'),    {} ],
-    [ 'Name',         _exp('Name'),         {} ],
-    [ 'Version',      _exp('Version'),      {} ],
-    [ 'Synopsis',     _exp('Generic'),      { 'header' => 'SYNOPSIS'    } ],
-    [ 'Description',  _exp('Generic'),      { 'header' => 'DESCRIPTION' } ],
-    [ 'Attributes',   _exp('Collect'),      { 'header' => 'ATTRIBUTES', 'command' => 'attributes' } ],
-    [ 'Methods',      _exp('Collect'),      { 'header' => 'METHODS',    'command' => 'method' } ],
-    [ 'Leftovers',    _exp('Leftovers'),    {} ],
-    [ 'Installation', _exp('Installation'), {} ],
-    [ 'SeeAlso',      _exp('SeeAlso'),      {} ],
-    [ 'Authors',      _exp('Authors'),      {} ],
-    [ 'Legal',        _exp('Legal'),        {} ],
-    [ 'List',         _exp('-Transformer'), { 'transformer' => 'List' } ],
-  );
+  push @plugins, ( [ 'CorePrep', _exp( '@CorePrep' ), {} ], [ 'Name', _exp( 'Name' ), {} ], [ 'Version', _exp( 'Version' ), {} ], [ 'Synopsis', _exp( 'Generic' ), { 'header' => 'SYNOPSIS' } ], [ 'Description', _exp( 'Generic' ), { 'header' => 'DESCRIPTION' } ], [ 'Attributes', _exp( 'Collect' ), { 'header' => 'ATTRIBUTES', 'command' => 'attributes' } ], [ 'Methods', _exp( 'Collect' ), { 'header' => 'METHODS', 'command' => 'method' } ], [ 'Leftovers', _exp( 'Leftovers' ), {} ], [ 'Installation', _exp( 'Installation' ), {} ], [ 'SeeAlso', _exp( 'SeeAlso' ), {} ], [ 'Authors', _exp( 'Authors' ), {} ], [ 'Legal', _exp( 'Legal' ), {} ], [ 'List', _exp( '-Transformer' ), { 'transformer' => 'List' } ], );
 
   # Make sure this list is unique
   $_->[ 0 ] =~ s!^!\@AYOUNG/! for @plugins;
@@ -38,6 +24,18 @@ sub mvp_bundle_config {
 }
 
 1;
+
+__END__
+
+=pod
+
+=head1 NAME
+
+Pod::Weaver::PluginBundle::AYOUNG - AYOUNG's default Pod::Weaver config
+
+=head1 VERSION
+
+version 0.09
 
 =for Pod::Coverage mvp_bundle_config
 
@@ -110,5 +108,20 @@ Any of the bundles found in the
 L<Pod::Weaver::PluginBundle>
 
 namespace.
+
+=head1 INSTALLATION
+
+See perlmodinstall for information and options on installing Perl modules.
+
+=head1 AUTHOR
+
+Alan Young <harleypig@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Alan Young.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
