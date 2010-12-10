@@ -54,7 +54,7 @@
    "provides" : {
       "Pod::Weaver::PluginBundle::AYOUNG" : {
          "file" : "lib/Pod/Weaver/PluginBundle/AYOUNG.pm",
-         "version" : "0.09"
+         "version" : "0.10"
       }
    },
    "release_status" : "stable",
@@ -68,6 +68,6 @@
          "web" : "http://github.com/harleypig/pod-weaver-pluginbundle-ayoung"
       }
    },
-   "version" : "0.09"
+   "version" : "0.10"
 }
 

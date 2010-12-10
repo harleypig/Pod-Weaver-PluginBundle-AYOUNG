@@ -28,7 +28,7 @@ my %module_build_args = (
     'Alan Young <harleypig@gmail.com>'
   ],
   'dist_name' => 'Pod-Weaver-PluginBundle-AYOUNG',
-  'dist_version' => '0.09',
+  'dist_version' => '0.10',
   'license' => 'perl',
   'module_name' => 'Pod::Weaver::PluginBundle::AYOUNG',
   'recommends' => {},

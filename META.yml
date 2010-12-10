@@ -31,10 +31,10 @@ no_index:
 provides:
   Pod::Weaver::PluginBundle::AYOUNG:
     file: lib/Pod/Weaver/PluginBundle/AYOUNG.pm
-    version: 0.09
+    version: 0.10
 requires:
   Pod::Weaver::Config::Assembler: 0
 resources:
   bugtracker: http://github.com/harleypigs/pod-weaver-pluginbundle-ayoung/issues
   repository: git://github.com/harleypig/pod-weaver-pluginbundle-ayoung.git
-version: 0.09
+version: 0.10

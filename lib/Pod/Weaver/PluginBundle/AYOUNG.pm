@@ -7,7 +7,7 @@ use warnings;
 
 use Pod::Weaver::Config::Assembler;
 
-our $VERSION = 0.09;  # VERSION
+our $VERSION = 0.10;  # VERSION
 
 sub _exp { Pod::Weaver::Config::Assembler->expand_package( $_[ 0 ] ) }
 
@@ -35,7 +35,7 @@ Pod::Weaver::PluginBundle::AYOUNG - AYOUNG's default Pod::Weaver config
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =for Pod::Coverage mvp_bundle_config
 
